@@ -1,28 +1,27 @@
 <!DOCTYPE html> 
 <html lang="en">
 	
-<!-- doccure/  30 Nov 2019 04:11:34 GMT -->
-<head>
+    <head>
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
 		<title>Doccure</title>
 		
-		<!-- Favicons -->
-		<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
+		{/* <!-- Favicons --> */}
+		<link type="image/x-icon" href="assets/img/favicon.png" rel="icon" />
 		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		{/* <!-- Bootstrap CSS --> */}
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 		
-		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		{/* <!-- Fontawesome CSS --> */}
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
 		
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
+		{/* <!-- Main CSS --> */}
+		<link rel="stylesheet" href="assets/css/style.css" />
 		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
+		{/* <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> */}
+		{/* <!--[if lt IE 9]> */}
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
@@ -30,10 +29,10 @@
 	</head>
 	<body>
 
-		<!-- Main Wrapper -->
+		{/* <!-- Main Wrapper --> */}
 		<div class="main-wrapper">
 		
-			<!-- Header -->
+			{/* <!-- Header --> */}
 			<header class="header">
 				<nav class="navbar navbar-expand-lg header-nav">
 					<div class="navbar-header">
@@ -45,13 +44,13 @@
 							</span>
 						</a>
 						<a href="index-2.html" class="navbar-brand logo">
-							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
 							<a href="index-2.html" class="menu-logo">
-								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
 								<i class="fas fa-times"></i>
@@ -136,9 +135,9 @@
 					</ul>
 				</nav>
 			</header>
-			<!-- /Header -->
+			{/* <!-- /Header --> */}
 			
-			<!-- Home Banner -->
+			{/* <!-- Home Banner --> */}
 			<section class="section section-search">
 				<div class="container-fluid">
 					<div class="banner-wrapper">
@@ -147,7 +146,7 @@
 							<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
 						</div>
                          
-						<!-- Search -->
+						{/* <!-- Search --> */}
 						<div class="search-box">
 							<form action="templateshub.net">
 								<div class="form-group search-location">
@@ -161,14 +160,14 @@
 								<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
 							</form>
 						</div>
-						<!-- /Search -->
+						{/* <!-- /Search --> */}
 						
 					</div>
 				</div>
 			</section>
-			<!-- /Home Banner -->
+			{/* <!-- /Home Banner --> */}
 			  
-			<!-- Clinic and Specialities -->
+			{/* <!-- Clinic and Specialities --> */}
 			<section class="section section-specialities">
 				<div class="container-fluid">
 					<div class="section-header text-center">
@@ -177,10 +176,10 @@
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-9">
-							<!-- Slider -->
+							{/* <!-- Slider --> */}
 							<div class="specialities-slider slider">
 							
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="speicality-item text-center">
 									<div class="speicality-img">
 										<img src="assets/img/specialities/specialities-01.png" class="img-fluid" alt="Speciality">
@@ -188,9 +187,9 @@
 									</div>
 									<p>Urology</p>
 								</div>	
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="speicality-item text-center">
 									<div class="speicality-img">
 										<img src="assets/img/specialities/specialities-02.png" class="img-fluid" alt="Speciality">
@@ -198,9 +197,9 @@
 									</div>
 									<p>Neurology</p>	
 								</div>							
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="speicality-item text-center">
 									<div class="speicality-img">
 										<img src="assets/img/specialities/specialities-03.png" class="img-fluid" alt="Speciality">
@@ -208,9 +207,9 @@
 									</div>	
 									<p>Orthopedic</p>	
 								</div>							
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="speicality-item text-center">
 									<div class="speicality-img">
 										<img src="assets/img/specialities/specialities-04.png" class="img-fluid" alt="Speciality">
@@ -218,9 +217,9 @@
 									</div>	
 									<p>Cardiologist</p>	
 								</div>							
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="speicality-item text-center">
 									<div class="speicality-img">
 										<img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">
@@ -228,18 +227,18 @@
 									</div>	
 									<p>Dentist</p>
 								</div>							
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
 							</div>
-							<!-- /Slider -->
+							{/* <!-- /Slider --> */}
 							
 						</div>
 					</div>
 				</div>   
 			</section>	 
-			<!-- Clinic and Specialities -->
+			{/* <!-- Clinic and Specialities --> */}
 		  
-			<!-- Popular Section -->
+			{/* <!-- Popular Section --> */}
 			<section class="section section-doctor">
 				<div class="container-fluid">
 				   <div class="row">
@@ -257,7 +256,7 @@
 						<div class="col-lg-8">
 							<div class="doctor-slider slider">
 							
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -303,9 +302,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 						
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -351,9 +350,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 						
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -399,9 +398,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 						
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -447,9 +446,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 								
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -495,9 +494,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 								
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -543,9 +542,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 								
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -591,9 +590,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Doctor Widget -->
+								{/* <!-- /Doctor Widget --> */}
 								
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								<div class="profile-widget">
 									<div class="doc-img">
 										<a href="doctor-profile.html">
@@ -639,16 +638,16 @@
 										</div>
 									</div>
 								</div>
-								<!-- Doctor Widget -->
+								{/* <!-- Doctor Widget --> */}
 								
 							</div>
 						</div>
 				   </div>
 				</div>
 			</section>
-			<!-- /Popular Section -->
+			{/* <!-- /Popular Section --> */}
 		   
-		   <!-- Availabe Features -->
+		   {/* <!-- Availabe Features --> */}
 		   <section class="section section-features">
 				<div class="container-fluid">
 				   <div class="row">
@@ -661,72 +660,72 @@
 								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
 							</div>	
 							<div class="features-slider slider">
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
 									<p>Patient Ward</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
 									<p>Test Room</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
 									<p>ICU</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
 									<p>Laboratory</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
 									<p>Operation</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 								
-								<!-- Slider Item -->
+								{/* <!-- Slider Item --> */}
 								<div class="feature-item text-center">
 									<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
 									<p>Medical</p>
 								</div>
-								<!-- /Slider Item -->
+								{/* <!-- /Slider Item --> */}
 							</div>
 						</div>
 				   </div>
 				</div>
 			</section>		
-			<!-- Availabe Features -->
+			{/* <!-- Availabe Features --> */}
 			
-			<!-- Footer -->
+			{/* <!-- Footer --> */}
 			<footer class="footer">
 				
-				<!-- Footer Top -->
+				{/* <!-- Footer Top --> */}
 				<div class="footer-top">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
+								{/* <!-- Footer Widget --> */}
 								<div class="footer-widget footer-about">
 									<div class="footer-logo">
-										<img src="assets/img/footer-logo.png" alt="logo">
+										<img src="assets/img/footer-logo.png" alt="logo" />
 									</div>
 									<div class="footer-about-content">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 										<div class="social-icon">
-											<ul>
+                                        <ul>
 												<li>
 													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
 												</li>
@@ -746,13 +745,13 @@
 										</div>
 									</div>
 								</div>
-								<!-- /Footer Widget -->
+								{/* <!-- /Footer Widget --> */}
 								
 							</div>
 							
 							<div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
+								{/* <!-- Footer Widget --> */}
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Patients</h2>
 									<ul>
@@ -763,13 +762,13 @@
 										<li><a href="patient-dashboard.html"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
 									</ul>
 								</div>
-								<!-- /Footer Widget -->
+								{/* <!-- /Footer Widget --> */}
 								
 							</div>
 							
 							<div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
+								{/* <!-- Footer Widget --> */}
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Doctors</h2>
 									<ul>
@@ -780,13 +779,13 @@
 										<li><a href="doctor-dashboard.html"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
 									</ul>
 								</div>
-								<!-- /Footer Widget -->
+								{/* <!-- /Footer Widget --> */}
 								
 							</div>
 							
 							<div class="col-lg-3 col-md-6">
 							
-								<!-- Footer Widget -->
+								{/* <!-- Footer Widget --> */}
 								<div class="footer-widget footer-contact">
 									<h2 class="footer-title">Contact Us</h2>
 									<div class="footer-contact-info">
@@ -804,20 +803,20 @@
 										</p>
 									</div>
 								</div>
-								<!-- /Footer Widget -->
+								{/* <!-- /Footer Widget --> */}
 								
 							</div>
 							
 						</div>
 					</div>
 				</div>
-				<!-- /Footer Top -->
+				{/* <!-- /Footer Top --> */}
 				
-				<!-- Footer Bottom -->
+				{/* <!-- Footer Bottom --> */}
                 <div class="footer-bottom">
 					<div class="container-fluid">
 					
-						<!-- Copyright -->
+						{/* <!-- Copyright --> */}
 						<div class="copyright">
 							<div class="row">
 								<div class="col-md-6 col-lg-6">
@@ -827,44 +826,44 @@
 								</div>
 								<div class="col-md-6 col-lg-6">
 								
-									<!-- Copyright Menu -->
+									{/* <!-- Copyright Menu --> */}
 									<div class="copyright-menu">
 										<ul class="policy-menu">
 											<li><a href="term-condition.html">Terms and Conditions</a></li>
 											<li><a href="privacy-policy.html">Policy</a></li>
 										</ul>
 									</div>
-									<!-- /Copyright Menu -->
+									{/* <!-- /Copyright Menu --> */}
 									
 								</div>
 							</div>
 						</div>
-						<!-- /Copyright -->
+						{/* <!-- /Copyright --> */}
 						
 					</div>
 				</div>
-				<!-- /Footer Bottom -->
+				{/* <!-- /Footer Bottom --> */}
 				
 			</footer>
-			<!-- /Footer -->
+			{/* <!-- /Footer --> */}
 		   
 	   </div>
-	   <!-- /Main Wrapper -->
+	   {/* <!-- /Main Wrapper --> */}
 	  
-		<!-- jQuery -->
+		{/* <!-- jQuery --> */}
 		<script src="assets/js/jquery.min.js"></script>
 		
-		<!-- Bootstrap Core JS -->
+		{/* <!-- Bootstrap Core JS --> */}
 		<script src="assets/js/popper.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		
-		<!-- Slick JS -->
+		{/* <!-- Slick JS --> */}
 		<script src="assets/js/slick.js"></script>
 		
-		<!-- Custom JS -->
+		{/* <!-- Custom JS --> */}
 		<script src="assets/js/script.js"></script>
 		
 	</body>
 
-<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
+{/* <!-- doccure/  30 Nov 2019 04:11:53 GMT --> */}
 </html>

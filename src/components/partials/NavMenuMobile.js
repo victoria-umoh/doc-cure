@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Navbar, Container, Row, Col } from 'react-bootstrap'
 import Logo from '../../assets/img/logo.png'
 
 class NavMenuMobile extends Component {
@@ -15,7 +16,7 @@ class NavMenuMobile extends Component {
                       <div className="main-menu-wrapper">
                             <div className="menu-header">
                                 <Link to="/index-2" className="menu-logo">
-                            <img src={Logo} className="img-fluid" alt="Logo"/>
+                                    <img src={Logo} className="img-fluid" alt="Logo"/>
                                 </Link>
                                 <Link to="/" id="menu_close" className="menu-close" href="javascript:void(0);">
                                     <i className="fas fa-times"></i>
@@ -90,6 +91,8 @@ class NavMenuMobile extends Component {
                 </Container>
               </Navbar>
             </div>
+
+            
           </>
         );
     }

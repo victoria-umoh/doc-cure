@@ -2091,6 +2091,9 @@ html.menu-opened body {
 	font-weight: 400;
 	margin: 10px 0 0;
 }
+.footer .footer-bottom .copyright-menu ul li a{
+	text-decoration: none;
+}
 .footer .social-icon ul {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
@@ -2112,6 +2115,7 @@ html.menu-opened body {
 	display: inline-flex;
 	font-size: 20px;
 	transition: all 0.4s ease 0s;
+	text-decoration: none;
 }
 .footer .social-icon ul li a:hover {
 	color: #09e5ab;
@@ -2676,9 +2680,9 @@ html.menu-opened body {
     font-weight: 500;
     margin: 20px 0 0;
 }
-.features-slider .slick-slide {
+/* .features-slider .slick-slide {
 	margin-right: 62px;
-}
+} */
 .features-slider .slick-center {
     opacity: 1;
     transform: scale(1.20);
