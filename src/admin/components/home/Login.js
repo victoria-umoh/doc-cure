@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import LogoWhite from '../../assets/img/logo-white.png'
+// import LoginBanner from '../../assets/img/login-banner.png'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
-
+import { Container, Row, Col, Image  } from 'react-bootstrap'
+import '../../assets/css/style.css'
 export class Login extends Component {
   render() {
     return (
@@ -11,15 +11,17 @@ export class Login extends Component {
          {/* Main Wrapper  */}
         <div className="main-wrapper login-body">
             <div className="login-wrapper">
-            	<div className="container">
-                	<div className="loginbox">
-                    	<div className="login-left">
-							<img className="img-fluid" src={LogoWhite} alt="Logo" />
-                        </div>
-                        <div className="login-right">
+            	<Container>
+                	<Row className="loginbox">
+
+                    	<Col lg={6} md={6} sm={12} xs={12} className="login-left">
+							<Image fluid src={LogoWhite} alt="Logo" />
+                        </Col>
+
+                        <Col lg={6} md={6} sm={12} xs={12} className="login-right">
 							<div className="login-right-wrap">
-								<h1>Login</h1>
-								<p className="account-subtitle">Access to our dashboard</p>
+								<h1>Admin Login</h1>
+								<p className="account-subtitle">Access to Admin dashboard</p>
 								
 								 {/* Form  */}
 								<form action="https://dreamguys.co.in/demo/doccure/admin/index.html">
@@ -35,25 +37,25 @@ export class Login extends Component {
 								</form>
 								 {/* /Form  */}
 								
-								<div className="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
+								<div className="text-center forgotpass"><Link to="/admin-forgot-password">Forgot Password?</Link></div>
 								<div className="login-or">
 									<span className="or-line"></span>
-									<span className="span-or">or</span>
+									<span className="span-or">or</span> 
 								</div>
 								  
 								 {/* Social Login  */}
 								<div className="social-login">
 									<span>Login with</span>
-									<a href="#" className="facebook"><FontAwesomeIcon icon={faFacebook} /></a>
-                  					<a href="#" className="google"><FontAwesomeIcon icon={faGoogle} /></a>
+									<a href="#" className="facebook"><i className="fab fa-facebook-f mr-1"></i></a>
+                  					<a href="#" className="google"><i className="fab fa-google mr-1"></i></a>
 								</div>
 								 {/* /Social Login  */}
 								
 								<div className="text-center dont-have">Don't have an account? <Link to="/admin-register">Register</Link></div>
 							</div>
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
 		 {/* /Main Wrapper  */}

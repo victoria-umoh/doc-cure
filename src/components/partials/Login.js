@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import LoginBanner from '../../assets/img/login-banner.png'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faFacebook } from '@fortawesome/free-solid-svg-icons';
 class Login extends Component {
     componentDidMount(){
         window.scroll(0,0)
@@ -38,14 +40,16 @@ class Login extends Component {
 												<span className="span-or">or</span>
 											</div>
 											<div className="row form-row social-login">
-												<div className="col-6">
-													<a href="#" className="btn btn-facebook btn-block"><i className="fab fa-facebook-f mr-1"></i> Login</a>
+											<div className="col-6">
+													<a href="#" className="btn btn-facebook btn-block">
+													<FontAwesomeIcon icon={faFacebook} /> Login</a>
 												</div>
 												<div className="col-6">
-													<a href="#" className="btn btn-google btn-block"><i className="fab fa-google mr-1"></i> Login</a>
+													<a href="#" className="btn btn-google btn-block">
+														<FontAwesomeIcon icon={faGoogle} /> Login</a>
 												</div>
 											</div>
-											<div className="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+											<div className="text-center dont-have">Don’t have an account? <Link to="/register">Register</Link></div>
 										</form>
 									</div>
                         </Col>

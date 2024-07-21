@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import DoctorThumb02 from '../../assets/img/doctors/doctor-thumb-02.jpg'
+import Feature01 from '../../assets/img/features/feature-02.jpg'
+import Feature02 from '../../assets/img/features/feature-02.jpg'
 
-export class DoctorProfileSettingPage extends Component {
+export class DoctorProfileSettings extends Component {
   render() {
     return (
         <>
@@ -34,7 +37,7 @@ export class DoctorProfileSettingPage extends Component {
                                <div className="widget-profile pro-widget-content">
                                    <div className="profile-info-widget">
                                        <a href="#" className="booking-doc-img">
-                                           <img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User " />
+                                           <img src={DoctorThumb02} alt="User " />
                                        </a>
                                        <div className="profile-det-info">
                                            <h3>Dr. Darren Elder</h3>
@@ -133,7 +136,7 @@ export class DoctorProfileSettingPage extends Component {
                                            <div className="form-group">
                                                <div className="change-avatar">
                                                    <div className="profile-img">
-                                                       <img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User " />
+                                                       <img src={DoctorThumb02} alt="User " />
                                                    </div>
                                                    <div className="upload-img">
                                                        <div className="change-photo-btn">
@@ -232,11 +235,11 @@ export class DoctorProfileSettingPage extends Component {
                                            </div>
                                            <div className="upload-wrap">
                                                <div className="upload-images">
-                                                   <img src="assets/img/features/feature-01.jpg" alt="Upload " />
+                                                   <img src={Feature01} alt="Upload " />
                                                    <a href="javascript:void(0);" className="btn btn-icon btn-danger btn-sm"><i className="far fa-trash-alt"></i></a>
                                                </div>
                                                <div className="upload-images">
-                                                   <img src="assets/img/features/feature-02.jpg" alt="Upload " />
+                                                   <img src={Feature02} alt="Upload " />
                                                    <a href="javascript:void(0);" className="btn btn-icon btn-danger btn-sm"><i className="far fa-trash-alt"></i></a>
                                                </div>
                                            </div>
@@ -312,7 +315,7 @@ export class DoctorProfileSettingPage extends Component {
 
                                    </div>
                                    
-                                   <div className="row custom_price_cont" id="custom_price_cont" style="display: none;">
+                                   <div className="row custom_price_cont" id="custom_price_cont" style={{display: 'none'}}>
                                        <div className="col-md-4">
                                            <input type="text" className="form-control" id="custom_rating_input" name="custom_rating_count" value="" placeholder="20" />
                                            <small className="form-text text-muted">Custom price you can add</small>
@@ -512,4 +515,4 @@ export class DoctorProfileSettingPage extends Component {
   }
 }
 
-export default DoctorProfileSettingPage
+export default DoctorProfileSettings

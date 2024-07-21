@@ -17,7 +17,7 @@ import ScheduleTimingPage from '../pages/ScheduleTimingPage';
 import MyPatientPage from '../pages/MyPatientPage';
 import ChatDoctorPage from '../pages/ChatDoctorPage';
 import DoctorProfilePage from '../pages/DoctorProfilePage';
-import DoctorProfileSettingsPage from '../pages/DoctorProfileSettingPage';
+import DoctorProfileSettingPage from '../pages/DoctorProfileSettingPage';
 import VoiceCallPage from '../pages/VoiceCallPage';
 import VideoCallPage from '../pages/VideoCallPage';
 import FavouritesPage from '../pages/FavouritePage';
@@ -81,7 +81,7 @@ class AppRoute extends Component {
                     <Route path="/my-patients" element={<MyPatientPage />} />
                     <Route path="/patient-profile" element={<PatientProfilePage />} />
                     <Route path="/chat-doctor" element={<ChatDoctorPage />} />
-                    <Route path="/doctor-profile-settings" element={<DoctorProfileSettingsPage />} />
+                    <Route path="/doctor-profile-settings" element={<DoctorProfileSettingPage />} />
                     <Route path="/doctor-profile" element={<DoctorProfilePage />} />
                     <Route path="/voice-call" element={<VoiceCallPage />} />
                     <Route path="/checkout" element={<CheckoutPage />} />

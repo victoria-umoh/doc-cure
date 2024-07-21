@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LoginBanner from '../../assets/img/login-banner.png'
+import { Link } from 'react-router-dom'
 
 export class login extends Component {
   render() {
@@ -22,6 +23,7 @@ export class login extends Component {
 										<div className="login-header">
 											<h3>Login <span>Doccure</span></h3>
 										</div>
+										
 										<form action="" post="">
 											<div className="form-group form-focus">
 												<input type="email" className="form-control floating" />
@@ -32,7 +34,7 @@ export class login extends Component {
 												<label className="focus-label">Password</label>
 											</div>
 											<div className="text-right">
-												<a className="forgot-link" href="forgot-password.html">Forgot Password ?</a>
+												<Link className="forgot-link" to="/forgot-password">Forgot Password ?</Link>
 											</div>
 											<button className="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
 											<div className="login-or">
@@ -44,10 +46,11 @@ export class login extends Component {
 													<a href="#" className="btn btn-facebook btn-block"><i className="fab fa-facebook-f mr-1"></i> Login</a>
 												</div>
 												<div className="col-6">
-													<a href="#" className="btn btn-google btn-block"><i className="fab fa-google mr-1"></i> Login</a>
+													<a href="#" className="btn btn-google btn-block">
+														<i className="fab fa-google mr-1"></i> Login</a>
 												</div>
 											</div>
-											<div className="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+											<div className="text-center dont-have">Don’t have an account? <Link to="/register">Register</Link></div>
 										</form>
 									</div>
 								</div>
