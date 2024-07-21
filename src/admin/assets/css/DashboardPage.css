@@ -1,0 +1,28 @@
+/* .sidebar {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+  }
+  
+  .dashboard-content {
+    margin-left: 16.66%; 
+  }
+   */
+
+   /* Fixed sidebar */
+#sidebar {
+    position: fixed;
+    height: 100%;
+    width: 200px; /* Adjust as necessary */
+    background-color: #f8f9fa;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  
+  .dashboard-content {
+    margin-left: 200px; /* Adjust to match sidebar width */
+    padding: 20px;
+    overflow-y: auto; /* Allow content to scroll */
+  }
+  

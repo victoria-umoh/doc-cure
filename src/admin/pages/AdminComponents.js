@@ -5,7 +5,7 @@ import NavMenuMobile from '../components/partials/NavMenuMobile'
 import FooterDesktop from '../components/partials/FooterDesktop'
 import FooterMobile from '../components/partials/FooterMobile'
 import SideBar from '../components/home/SideBar'
-import Dashboard from '../components/home/Dashboard'
+import ComponentSection from '../components/home/ComponentSection'
 
 export class AdminComponents extends Component {
   render() {
@@ -26,7 +26,7 @@ export class AdminComponents extends Component {
                         <SideBar />
                     </Col>
                     <Col lg={9} md={9} sm={12} >
-                        <Dashboard />
+                        <ComponentSection />
                     </Col>
                     {/* things you want to display on the index page gos here */}
 

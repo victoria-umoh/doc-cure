@@ -52,8 +52,8 @@ export class AppointmentList extends Component {
                 <div className="col-sm-12">
                   <h3 className="page-title">Appointments</h3>
                   <ul className="breadcrumb">
-                    <li className="breadcrumb-item"><Link href="/admin-dashboard">Dashboard</Link></li>
-                    <li className="breadcrumb-item active">Appointments</li>
+                    <li className="breadcrumb-item"><Link href="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+                    <li className="breadcrumb-item">Appointments</li>
                   </ul>
                 </div>
               </div>

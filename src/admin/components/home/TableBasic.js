@@ -14,8 +14,9 @@ export class TableBasic extends Component {
 							<div className="col">
 								<h3 className="page-title">Basic Tables</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Basic Tables</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Basic Tables</li>
 								</ul>
 							</div>
 						</div>

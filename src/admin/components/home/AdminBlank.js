@@ -14,7 +14,7 @@ export class AdminBlank extends Component {
                     <div className="col-sm-12">
                     <h3 className="page-title">Blank Page</h3>
                     <ul className="breadcrumb">
-                        <li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
+                        <li className="breadcrumb-item"><Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
                         <li className="breadcrumb-item active">Blank Page</li>
                     </ul>
                     </div>

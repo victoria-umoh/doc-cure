@@ -25,8 +25,9 @@ export class InvoiceReport extends Component {
 							<div className="col-sm-12">
 								<h3 className="page-title">Invoice Report</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Invoice Report</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Invoice Report</li>
 								</ul>
 							</div>
 						</div>

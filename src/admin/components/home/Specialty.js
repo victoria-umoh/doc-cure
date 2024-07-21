@@ -19,8 +19,9 @@ export class Specialty extends Component {
 							<div className="col-sm-7 col-auto">
 								<h3 className="page-title">Specialities</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Specialities</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Specialities</li>
 								</ul>
 							</div>
 							<div className="col-sm-5 col">

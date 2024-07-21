@@ -15,8 +15,9 @@ export class FormValidation extends Component {
 							<div className="col-sm-12">
 								<h3 className="page-title">Form Validation</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Form Validation</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Form Validation</li>
 								</ul>
 							</div>
 						</div>

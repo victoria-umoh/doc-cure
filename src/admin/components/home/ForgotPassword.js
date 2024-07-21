@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-// import { LogoWhite } from '../../assets/img/logo-white.png'
+import LogoWhite from '../../assets/img/logo-white.png'
 
 export class ForgotPassword extends Component {
   render() {
@@ -11,10 +11,10 @@ export class ForgotPassword extends Component {
                 <div className="login-wrapper">
                     <div className="container">
                         <div className="loginbox">
-                            <div className="login-left">
-                            {/* <img className="img-fluid" src={LogoWhite} alt="Logo" /> */}
+                            <div className="col-md-6 login-left">
+                                <img className="img-fluid" src={LogoWhite} alt="Logo" />
                             </div>
-                            <div className="login-right">
+                            <div className="col-md-6 login-right">
                                 <div className="login-right-wrap">
                                     <h1>Forgot Password?</h1>
                                     <p className="account-subtitle">Enter your email to get a password reset link </p>

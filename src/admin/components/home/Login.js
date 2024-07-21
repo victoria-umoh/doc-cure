@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import LogoWhite from '../../assets/img/logo-white.png'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 export class Login extends Component {
   render() {
@@ -42,12 +44,12 @@ export class Login extends Component {
 								 {/* Social Login  */}
 								<div className="social-login">
 									<span>Login with</span>
-									<a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
-                  <a href="#" className="google"><i className="fa fa-google"></i></a>
+									<a href="#" className="facebook"><FontAwesomeIcon icon={faFacebook} /></a>
+                  					<a href="#" className="google"><FontAwesomeIcon icon={faGoogle} /></a>
 								</div>
 								 {/* /Social Login  */}
 								
-								<div className="text-center dont-have">Don't have an account? <Link to="/register">Register</Link></div>
+								<div className="text-center dont-have">Don't have an account? <Link to="/admin-register">Register</Link></div>
 							</div>
                         </div>
                     </div>

@@ -15,9 +15,10 @@ export class Settings extends Component {
 							<div className="col-sm-12">
 								<h3 className="page-title">General Settings</h3>
 								<ul className="breadcrumb">
-                                    <li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
+                                    <li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
 									<li className="breadcrumb-item"><a href="javascript:(0)">Settings</a></li>
-									<li className="breadcrumb-item active">General Settings</li>
+									<li className="breadcrumb-item ">General Settings</li>
 								</ul>
 							</div>
 						</div>

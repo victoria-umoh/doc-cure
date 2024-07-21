@@ -58,6 +58,7 @@ import TableBasicPage from '../admin/pages/TableBasicPage';
 import DataTablePage from '../admin/pages/DataTablePage';
 import InvoiceReportPage from '../admin/pages/InvoiceReportPage';
 import AdminInvoicePage from '../admin/pages/AdminInvoicePage';
+import AdminComponents from '../admin/pages/AdminComponents';
 
 class AppRoute extends Component {
     render() {
@@ -103,14 +104,14 @@ class AppRoute extends Component {
                   <Route path="/specialities" element={<AdminSpecialtyPage />} />
                   <Route path="/doctor-list" element={<DoctorListPage />} />
                   <Route path="/patient-list" element={<PatientListPage />} />
-                  <Route path="/review" element={<AdminReviewPage />} />
+                  <Route path="/admin-reviews" element={<AdminReviewPage />} />
                   <Route path="/transactions-list" element={<TransactionListPage />} />
                   <Route path="/settings" element={<AdminSettingsPage />} />
                   <Route path="/invoice-report" element={<InvoiceReportPage />} />
-                  <Route path="/profile" element={<AdminProfilePage />} />
-                  <Route path="/login" element={<AdminLoginPage />} />
-                  <Route path="/register" element={<AdminRegisterPage />} />
-                  <Route path="/forgot-password" element={<AdminForgotPasswordPage />} />
+                  <Route path="/admin-profile" element={<AdminProfilePage />} />
+                  <Route path="/admin-login" element={<AdminLoginPage />} />
+                  <Route path="/admin-register" element={<AdminRegisterPage />} />
+                  <Route path="/admin-forgot-password" element={<AdminForgotPasswordPage />} />
                   <Route path="/lock-screen" element={<LockScreenPage />} />
                   <Route path="/error-404" element={<Error404Page />} />
                   <Route path="/error-500" element={<Error500Page />} />
@@ -125,6 +126,7 @@ class AppRoute extends Component {
                   <Route path="/data-tables" element={<DataTablePage />} />
                   <Route path="/invoice-report" element={<InvoiceReportPage />} />
                   <Route path="/invoice" element={<AdminInvoicePage />} />
+                  <Route path="/admin-components" element={<AdminComponents />} />
                 </Routes>
             </BrowserRouter>
         );

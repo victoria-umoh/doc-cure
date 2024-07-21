@@ -14,8 +14,9 @@ export class FormHorizontal extends Component {
 							<div className="col">
 								<h3 className="page-title">Horizontal Form</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Horizontal Form</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Horizontal Form</li>
 								</ul>
 							</div>
 						</div>

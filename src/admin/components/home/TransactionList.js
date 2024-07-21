@@ -25,8 +25,9 @@ export class TransactionList extends Component {
 							<div className="col-sm-12">
 								<h3 className="page-title">Transactions</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item active">Transactions</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">Transactions</li>
 								</ul>
 							</div>
 						</div>

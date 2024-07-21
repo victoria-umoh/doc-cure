@@ -30,9 +30,11 @@ export class PatientList extends Component {
 							<div className="col-sm-12">
 								<h3 className="page-title">List of Patient</h3>
 								<ul className="breadcrumb">
-									<li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-									<li className="breadcrumb-item"><a href="javascript:(0);">Users</a></li>
-									<li className="breadcrumb-item active">Patient</li>
+									<li className="breadcrumb-item">
+										<Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+									<li className="breadcrumb-item">
+										<a href="javascript:(0);" className='text-decoration-none'>Users</a></li>
+									<li className="breadcrumb-item">Patient</li>
 								</ul>
 							</div>
 						</div>
@@ -132,7 +134,7 @@ export class PatientList extends Component {
 													<td>#PT006</td>
 													<td>
 														<h2 className="table-avatar">
-															<Link to="/profile" className="avatar avatar-sm mr-2"><img className="avatar-img rounded-circle" ssrc={Patient6} alt="User" /></Link>
+															<Link to="/profile" className="avatar avatar-sm mr-2"><img className="avatar-img rounded-circle" src={Patient6} alt="User" /></Link>
 															<Link to="/profile">Elsie Gilley</Link>
 														</h2>
 													</td>
@@ -146,7 +148,8 @@ export class PatientList extends Component {
 													<td>#PT007</td>
 													<td>
 														<h2 className="table-avatar">
-															<Link to="/profile" className="avatar avatar-sm mr-2"><img className="avatar-img rounded-circle" src={Patient7} alt="User" /></Link>
+															<Link to="/profile" className="avatar avatar-sm mr-2">
+																<img className="avatar-img rounded-circle" src={Patient7} alt="User" /></Link>
 															<Link to="/profile"> Joan Gardner</Link>
 														</h2>
 													</td>

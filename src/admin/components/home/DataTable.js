@@ -20,8 +20,8 @@ class DataTable extends Component {
                 <div className="col">
                   <h3 className="page-title">Data Tables</h3>
                   <ul className="breadcrumb">
-                    <li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-                    <li className="breadcrumb-item active">Data Tables</li>
+                    <li className="breadcrumb-item"><Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+                    <li className="breadcrumb-item">Data Tables</li>
                   </ul>
                 </div>
               </div>

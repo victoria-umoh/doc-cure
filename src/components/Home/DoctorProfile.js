@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import DoctorThumb02 from '../../assets/img/doctors/doctor-thumb-02.jpg'
 import Patient from '../../assets/img/patients/patient.jpg'
 import Patient1 from '../../assets/img/patients/patient1.jpg'
@@ -23,7 +24,7 @@ export class DoctorProfile extends Component {
 						<div className="col-md-12 col-12">
 							<nav aria-label="breadcrumb" className="page-breadcrumb">
 								<ol className="breadcrumb">
-									<li className="breadcrumb-item"><a href="index-2.html">Home</a></li>
+									<li className="breadcrumb-item"><a href="index-2">Home</a></li>
 									<li className="breadcrumb-item active" aria-current="page">Doctor Profile</li>
 								</ol>
 							</nav>
@@ -104,9 +105,9 @@ export class DoctorProfile extends Component {
 										<a href="javascript:void(0)" className="btn btn-white fav-btn">
 											<i className="far fa-bookmark"></i>
 										</a>
-										<a href="chat.html" className="btn btn-white msg-btn">
+										<Link to="/chatl" className="btn btn-white msg-btn">
 											<i className="far fa-comment-alt"></i>
-										</a>
+										</Link>
 										<a href="javascript:void(0)" className="btn btn-white call-btn" data-toggle="modal" data-target="#voice_call">
 											<i className="fas fa-phone"></i>
 										</a>
@@ -115,7 +116,7 @@ export class DoctorProfile extends Component {
 										</a>
 									</div>
 									<div className="clinic-booking">
-										<a className="apt-btn" href="booking.html">Book Appointment</a>
+										<Link className="apt-btn" to="/booking">Book Appointment</Link>
 									</div>
 								</div>
 							</div>
@@ -791,7 +792,7 @@ export class DoctorProfile extends Component {
 									</div>							
 									<div className="call-items">
 										<a href="javascript:void(0);" className="btn call-item call-end" data-dismiss="modal" aria-label="Close"><i className="material-icons">call_end</i></a>
-										<a href="voice-call.html" className="btn call-item call-start"><i className="material-icons">call</i></a>
+										<Link to="/voice-call" className="btn call-item call-start"><i className="material-icons">call</i></Link>
 									</div>
 								</div>
 							</div>
@@ -821,7 +822,7 @@ export class DoctorProfile extends Component {
 									</div>							
 									<div className="call-items">
 										<a href="javascript:void(0);" className="btn call-item call-end" data-dismiss="modal" aria-label="Close"><i className="material-icons">call_end</i></a>
-										<a href="video-call.html" className="btn call-item call-start"><i className="material-icons">videocam</i></a>
+										<Link to="/video-call" className="btn call-item call-start"><i className="material-icons">videocam</i></Link>
 									</div>
 								</div>
 							</div>

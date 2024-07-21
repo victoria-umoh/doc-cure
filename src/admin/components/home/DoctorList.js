@@ -116,9 +116,9 @@ export class DoctorList extends Component {
                 <div className="col-sm-12">
                   <h3 className="page-title">List of Doctors</h3>
                   <ul className="breadcrumb">
-                    <li className="breadcrumb-item"><Link to="/admin-dashboard">Dashboard</Link></li>
-                    <li className="breadcrumb-item"><a href="javascript:void(0);">Users</a></li>
-                    <li className="breadcrumb-item active">Doctor</li>
+                    <li className="breadcrumb-item"><Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link></li>
+                    <li className="breadcrumb-item"><a href="javascript:void(0);" className='text-decoration-none'>Users</a></li>
+                    <li className="breadcrumb-item">Doctor</li>
                   </ul>
                 </div>
               </div>

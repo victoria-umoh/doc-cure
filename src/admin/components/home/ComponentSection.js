@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Alert, Container, Button, ButtonGroup, Dropdown, DropdownButton, SplitButton, ProgressBar} from 'react-bootstrap/';
 import Avatar2 from "../../assets/img/profiles/avatar-02.jpg";
 import Avatar3 from "../../assets/img/profiles/avatar-03.jpg";
 import Avatar4 from "../../assets/img/profiles/avatar-04.jpg";
 import Img01 from "../../assets/img/img-01.jpg";
 
-export class Components extends Component {
+export class ComponentSection extends Component {
   render() {
+    const alertTypes = [
+        { variant: 'primary', heading: 'Holy guacamole!', message: 'You should check in on some of those fields below.' },
+        { variant: 'secondary', heading: 'Holy guacamole!', message: 'You should check in on some of those fields below.' },
+        { variant: 'warning', heading: 'Warning!', message: 'There was a problem with your ' },
+        { variant: 'danger', heading: 'Error!', message: 'A problem has occurred while submitting your data.' },
+        { variant: 'success', heading: 'Success!', message: 'Your message has been sent successfully.' },
+        { variant: 'info', heading: 'Note!', message: 'Please read the comments carefully.' },
+        { variant: 'light', heading: 'Holy guacamole!', message: 'You should check in on some of those fields below.' },
+        { variant: 'dark', heading: 'Holy guacamole!', message: 'You should check in on some of those fields below.' },
+      ];
+     
     return (
       <>
         {/* Page Wrapper */}
@@ -19,9 +31,9 @@ export class Components extends Component {
                   <h3 className="page-title">Components</h3>
                   <ul className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <Link to="/admin-dashboard">Dashboard</Link>
+                      <Link to="/admin-dashboard" className='text-decoration-none'>Dashboard</Link>
                     </li>
-                    <li className="breadcrumb-item active">Components</li>
+                    <li className="breadcrumb-item" active>Components</li>
                   </ul>
                 </div>
               </div>
@@ -121,70 +133,28 @@ export class Components extends Component {
                 </div>
               </section>
               {/* /Avatar */}
-              {/* Alerts */}
-              <section className="comp-section">
-                <div className="section-header">
-                  <h3 className="section-title">Alerts</h3>
-                  <div className="line" />
-                </div>
-                <div className="card">
-                  <div className="card-body">
-                    <div className="alert alert-primary alert-dismissible fade show" role="alert">
-                      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-secondary alert-dismissible fade show" role="alert">
-                      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-warning alert-dismissible fade show" role="alert">
-                      <strong>Warning!</strong> There was a problem with your{" "}
-                      <a href="#" className="alert-link">network connection</a>.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-danger alert-dismissible fade show" role="alert">
-                      <strong>Error!</strong> A{" "}
-                      <a href="#" className="alert-link">problem</a> has been occurred while submitting your data.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-success alert-dismissible fade show" role="alert">
-                      <strong>Success!</strong> Your{" "}
-                      <a href="#" className="alert-link">message</a> has been sent successfully.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-info alert-dismissible fade show" role="alert">
-                      <strong>Note!</strong> Please read the{" "}
-                      <a href="#" className="alert-link">comments</a> carefully.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-light alert-dismissible fade show" role="alert">
-                      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="alert alert-dark alert-dismissible fade show" role="alert">
-                      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* /Alerts */}
+                    {/* Alerts */}
+                    <section className="comp-section">
+                        <div className="section-header">
+                            <h3 className="section-title">Alerts</h3>
+                            <div className="line" />
+                        </div>
+                        <Container>
+                            {alertTypes.map((alert, index) => (
+                            <Alert key={index} variant={alert.variant} dismissible>
+                                <Alert.Heading>{alert.heading}</Alert.Heading>
+                                <p>
+                                {alert.message}
+                                {alert.variant === 'warning' && <a href="#" className="alert-link">network connection</a>}
+                                {alert.variant === 'danger' && <a href="#" className="alert-link">problem</a>}
+                                {alert.variant === 'success' && <a href="#" className="alert-link">message</a>}
+                                {alert.variant === 'info' && <a href="#" className="alert-link">comments</a>}
+                                </p>
+                            </Alert>
+                            ))}
+                        </Container>
+                    </section>
+                    {/* /Alerts */}
                     {/* Breadcrumbs */}
                     <section className="comp-section">
                     <div className="section-header">
@@ -245,294 +215,104 @@ export class Components extends Component {
                     <div className="card">
                         <div className="card-body">
                         <h4 className="card-title">Default Button</h4>
-                        <button type="button" className="btn btn-primary">
-                            Primary
-                        </button>
-                        <button type="button" className="btn btn-secondary">
-                            Secondary
-                        </button>
-                        <button type="button" className="btn btn-success">
-                            Success
-                        </button>
-                        <button type="button" className="btn btn-danger">
-                            Danger
-                        </button>
-                        <button type="button" className="btn btn-warning">
-                            Warning
-                        </button>
-                        <button type="button" className="btn btn-info">
-                            Info
-                        </button>
-                        <button type="button" className="btn btn-light">
-                            Light
-                        </button>
-                        <button type="button" className="btn btn-dark">
-                            Dark
-                        </button>
-                        <button type="button" className="btn btn-link">
-                            Link
-                        </button>
+                        <Button variant="primary">Primary</Button>{' '}
+                        <Button variant="secondary">Secondary</Button>{' '}
+                        <Button variant="success">Success</Button>{' '}
+                        <Button variant="warning">Warning</Button>{' '}
+                        <Button variant="danger">Danger</Button>{' '}
+                        <Button variant="info">Info</Button>{' '}
+                        <Button variant="light">Light</Button>{' '}
+                        <Button variant="dark">Dark</Button>
+                        <Button variant="link">Link</Button>
                         <hr />
                         <h4 className="card-title">Button Sizes</h4>
                         <p>
-                            <button
-                            type="button"
-                            className="btn btn-primary btn-lg"
-                            >
-                            Primary
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-secondary btn-lg"
-                            >
-                            Secondary
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-success btn-lg"
-                            >
-                            Success
-                            </button>
-                            <button type="button" className="btn btn-danger btn-lg">
-                            Danger
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-warning btn-lg"
-                            >
-                            Warning
-                            </button>
-                            <button type="button" className="btn btn-info btn-lg">
-                            Info
-                            </button>
-                            <button type="button" className="btn btn-light btn-lg">
-                            Light
-                            </button>
-                            <button type="button" className="btn btn-dark btn-lg">
-                            Dark
-                            </button>
+                        <Button variant="primary" size="lg">Primary</Button>{' '}
+                        <Button variant="secondary" size="lg">Secondary</Button>{' '}
+                        <Button variant="success" size="lg">Success</Button>{' '}
+                        <Button variant="danger" size="lg">Danger </Button>{' '}
+                        <Button variant="warning" size="lg">Warning</Button>{' '}
+                        <Button variant="info" size="lg">Info</Button>{' '}
+                        <Button variant="light" size="lg">Light</Button>{' '}
+                        <Button variant="dark" size="lg">Dark </Button>
                         </p>
                         <p>
-                            <button type="button" className="btn btn-primary">
-                            Primary
-                            </button>
-                            <button type="button" className="btn btn-secondary">
-                            Secondary
-                            </button>
-                            <button type="button" className="btn btn-success">
-                            Success
-                            </button>
-                            <button type="button" className="btn btn-danger">
-                            Danger
-                            </button>
-                            <button type="button" className="btn btn-warning">
-                            Warning
-                            </button>
-                            <button type="button" className="btn btn-info">
-                            Info
-                            </button>
-                            <button type="button" className="btn btn-light">
-                            Light
-                            </button>
-                            <button type="button" className="btn btn-dark">
-                            Dark
-                            </button>
+                        <Button variant="primary">Primary</Button>{' '}
+                        <Button variant="secondary">Secondary</Button>{' '}
+                        <Button variant="success">Success</Button>{' '}
+                        <Button variant="danger">Danger </Button>{' '}
+                        <Button variant="warning">Warning</Button>{' '}
+                        <Button variant="info">Info</Button>{' '}
+                        <Button variant="light">Light</Button>{' '}
+                        <Button variant="dark">Dark </Button>
                         </p>
                         <p>
-                            <button
-                            type="button"
-                            className="btn btn-primary btn-sm"
-                            >
-                            Primary
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-secondary btn-sm"
-                            >
-                            Secondary
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-success btn-sm"
-                            >
-                            Success
-                            </button>
-                            <button type="button" className="btn btn-danger btn-sm">
-                            Danger
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-warning btn-sm"
-                            >
-                            Warning
-                            </button>
-                            <button type="button" className="btn btn-info btn-sm">
-                            Info
-                            </button>
-                            <button type="button" className="btn btn-light btn-sm">
-                            Light
-                            </button>
-                            <button type="button" className="btn btn-dark btn-sm">
-                            Dark
-                            </button>
+                        <Button variant="primary" size="sm">Primary</Button>{' '}
+                        <Button variant="secondary" size="sm">Secondary</Button>{' '}
+                        <Button variant="success" size="sm">Success</Button>{' '}
+                        <Button variant="danger" size="sm">Danger </Button>{' '}
+                        <Button variant="warning" size="sm">Warning</Button>{' '}
+                        <Button variant="info" size="sm">Info</Button>{' '}
+                        <Button variant="light" size="sm">Light</Button>{' '}
+                        <Button variant="dark" size="sm">Dark </Button>
                         </p>
+
                         <hr />
+                        
                         <h4 className="card-title">Button Groups</h4>
-                        <div className="btn-toolbar">
-                            <div className="btn-group btn-group-lg">
-                            <button type="button" className="btn btn-primary">
-                                Left
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Middle
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Right
-                            </button>
-                            </div>
-                        </div>
+                        <ButtonGroup size="lg" className="mb-2">
+                            <Button>Left</Button>
+                            <Button>Middle</Button>
+                            <Button>Right</Button>
+                        </ButtonGroup>
                         <br />
-                        <div className="btn-toolbar">
-                            <div className="btn-group">
-                            <button type="button" className="btn btn-primary">
-                                Left
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Middle
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Right
-                            </button>
-                            </div>
-                        </div>
+                        <ButtonGroup className="mb-2">
+                            <Button>Left</Button>
+                            <Button>Middle</Button>
+                            <Button>Right</Button>
+                        </ButtonGroup>
                         <br />
-                        <div className="btn-toolbar">
-                            <div className="btn-group btn-group-sm">
-                            <button type="button" className="btn btn-primary">
-                                Left
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Middle
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                Right
-                            </button>
-                            </div>
-                        </div>
-                        </div>
+                        <ButtonGroup size="sm">
+                            <Button>Left</Button>
+                            <Button>Middle</Button>
+                            <Button>Right</Button>
+                        </ButtonGroup>
                     </div>
+                    
                     {/* Rounded Button */}
                     <div className="card">
                         <div className="card-header">
                         <h4 className="card-title">Rounded Button</h4>
                         <p className="card-text">
-                            use <code>.btn-rounded</code> in class <code>.btn</code>{" "}
+                            use <code>.btn-rounded</code> in class <code>.btn</code>
+                            {" "}
                             class to get Rounded button
                         </p>
                         </div>
                         <div className="card-body">
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-primary"
-                        >
-                            Primary
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-secondary"
-                        >
-                            Secondary
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-success"
-                        >
-                            Success
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-danger"
-                        >
-                            Danger
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-warning"
-                        >
-                            Warning
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-info"
-                        >
-                            Info
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-light"
-                        >
-                            Light
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-dark"
-                        >
-                            Dark
-                        </button>
+                        <Button variant="primary" className="rounded">Primary</Button>{' '}
+                        <Button variant="secondary">Secondary</Button>{' '}
+                        <Button variant="success">Success</Button>{' '}
+                        <Button variant="danger">Danger </Button>{' '}
+                        <Button variant="warning">Warning</Button>{' '}
+                        <Button variant="info">Info</Button>{' '}
+                        <Button variant="light">Light</Button>{' '}
+                        <Button variant="dark">Dark </Button>
                         <hr />
                         <p>
-                            use <code>.btn-rounded</code> in class{" "}
+                            use <code>.btn-rounded</code> 
+                            in class{" "}
                             <code>.btn-outline-*</code> class to get Rounded Outline
                             button
                         </p>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-primary"
-                        >
-                            Primary
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-secondary"
-                        >
-                            Secondary
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-success"
-                        >
-                            Success
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-danger"
-                        >
-                            Danger
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-warning"
-                        >
-                            Warning
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-info"
-                        >
-                            Info
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-light"
-                        >
-                            Light
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-rounded btn-outline-dark"
-                        >
-                            Dark
-                        </button>
+                        <Button variant="outline-primary">Primary</Button>{' '}
+                        <Button variant="outline-secondary">Secondary</Button>{' '}
+                        <Button variant="outline-success">Success</Button>{' '}
+                        <Button variant="outline-warning">Warning</Button>{' '}
+                        <Button variant="outline-danger">Danger</Button>{' '}
+                        <Button variant="outline-info">Info</Button>{' '}
+                        <Button variant="outline-light">Light</Button>{' '}
+                        <Button variant="outline-dark">Dark</Button>
                         </div>
                     </div>
                     {/* /Rounded Button */}
@@ -616,145 +396,55 @@ export class Components extends Component {
                         <div className="row row-sm align-items-center mt-3">
                             <div className="col-12 col-xl mb-3 mb-xl-0">Active</div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-primary active"
-                            >
-                                Primary
-                            </button>
+                            <Button variant="outline-primary" active>Primary  </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-secondary active"
-                            >
-                                Secondary
-                            </button>
+                            <Button variant="outline-secondary" active> Secondary </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-success active"
-                            >
-                                Success
-                            </button>
+                             <Button variant="outline-success" active> Success </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-warning active"
-                            >
-                                Warning
-                            </button>
+                                <Button variant="outline-warning" active> Warning </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-danger active"
-                            >
-                                Danger
-                            </button>
+                                <Button variant="outline-danger" active> Danger </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-info active"
-                            >
-                                Info
-                            </button>
+                                <Button variant="outline-info" active> Info </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-light active"
-                            >
-                                Light
-                            </button>
+                                <Button variant="outline-light" active> Light </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                type="button"
-                                className="btn btn-block btn-outline-dark active"
-                            >
-                                Dark
-                            </button>
+                                <Button variant="outline-dark" active> Dark </Button>{' '}
                             </div>
                         </div>
                         <div className="row row-sm align-items-center mt-3">
-                            <div className="col-12 col-xl mb-3 mb-xl-0">
-                            Disabled
+                            <div className="col-12 col-xl mb-3 mb-xl-0"> Disabled </div>
+                            <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                <Button variant="outline-primary" disabled>Primary  </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-primary"
-                            >
-                                Primary
-                            </button>
+                                <Button variant="outline-secondary" disabled> Secondary </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-secondary"
-                            >
-                                Secondary
-                            </button>
+                                <Button variant="outline-success" disabled> Success </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-success"
-                            >
-                                Success
-                            </button>
+                                <Button variant="outline-warning" disabled> Warning </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-warning"
-                            >
-                                Warning
-                            </button>
+                                <Button variant="outline-danger" disabled> Danger </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-danger"
-                            >
-                                Danger
-                            </button>
+                                <Button variant="outline-info" disabled> Info </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-info"
-                            >
-                                Info
-                            </button>
+                                <Button variant="outline-light" disabled> Light </Button>{' '}
                             </div>
                             <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-light"
-                            >
-                                Light
-                            </button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                            <button
-                                disabled=""
-                                type="button"
-                                className="btn btn-block btn-outline-dark"
-                            >
-                                Dark
-                            </button>
+                                <Button variant="outline-dark" disabled> Dark </Button>{' '}
                             </div>
                         </div>
                         </div>
@@ -766,56 +456,57 @@ export class Components extends Component {
                         <h4 className="card-title">Progress Button</h4>
                         </div>
                         <div className="card-body">
-                        <button type="button" className="btn btn-primary">
+                        <Button variant="primary">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Primary
-                        </button>
-                        <button type="button" className="btn btn-secondary">
+                        </Button>
+                        <Button variant="secondary">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Secondary
-                        </button>
-                        <button type="button" className="btn btn-success">
+                        </Button>
+                        <Button variant="success">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Success
-                        </button>
-                        <button type="button" className="btn btn-danger">
+                        </Button>
+                        <Button variant="danger">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Danger
-                        </button>
-                        <button type="button" className="btn btn-warning">
+                        </Button>
+                        <Button variant="warning">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Warning
-                        </button>
-                        <button type="button" className="btn btn-info">
+                        </Button>
+                        <Button variant="info">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Info
-                        </button>
-                        <button type="button" className="btn btn-dark">
+                        </Button>
+                        <Button variant="dark">
                             <span
                             className="spinner-border spinner-border-sm mr-2"
                             role="status"
                             />
                             Dark
-                        </button>
+                        </Button>
                         </div>
+                    </div>
                     </div>
                     {/* /Progress Button */}
                     </section>
@@ -1145,324 +836,58 @@ export class Components extends Component {
                     <div className="card">
                         <div className="card-body">
                         <h4 className="card-title">Dropdowns within Text</h4>
-                        <div className="dropdown">
-                            <a
-                            className="dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false"
-                            >
-                            {" "}
-                            Dropdown{" "}
-                            </a>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            </div>
-                        </div>
+                        <Dropdown>
+                            <Dropdown.Toggle id="dropdown-basic">
+                                Dropdown
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                         <hr />
                         <h4 className="card-title">Dropdowns within Buttons</h4>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-primary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
+                        {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
+                            (variant) => (
+                            <DropdownButton
+                                as={ButtonGroup}
+                                key={variant}
+                                id={`dropdown-variants-${variant}`}
+                                variant={variant.toLowerCase()}
+                                title={variant}
                             >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-info dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-warning dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button
-                            type="button"
-                            className="btn btn-danger dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            Action
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>
+                                Active Item
+                                </Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                            </DropdownButton>
+                            ),
+                        )}
                         <hr />
                         <h4 className="card-title">Split button dropdowns</h4>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-primary">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
+                        {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
+                            (variant) => (
+                            <SplitButton
+                                key={variant}
+                                id={`dropdown-split-variants-${variant}`}
+                                variant={variant.toLowerCase()}
+                                title={variant}
                             >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-secondary">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-secondary dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-info">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-info dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-success">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-warning">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-warning dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
-                        <div className="btn-group">
-                            <button type="button" className="btn btn-danger">
-                            Action
-                            </button>
-                            <button
-                            type="button"
-                            className="btn btn-danger dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >
-                            <span className="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a className="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="#">
-                                Separated link
-                            </a>
-                            </div>
-                        </div>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>
+                                Active Item
+                                </Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                            </SplitButton>
+                            ),
+                        )}
+                        
                         </div>
                     </div>
                     </section>
@@ -1473,6 +898,7 @@ export class Components extends Component {
                         <h3 className="section-title">Pagination</h3>
                         <div className="line" />
                     </div>
+                    
                     <div className="card">
                         <div className="card-body">
                         <div>
@@ -1487,7 +913,7 @@ export class Components extends Component {
                                 1
                                 </a>
                             </li>
-                            <li className="page-item active">
+                            <li className="page-item" active>
                                 <a className="page-link" href="#">
                                 2 <span className="sr-only">(current)</span>
                                 </a>
@@ -1551,7 +977,7 @@ export class Components extends Component {
                                 1
                                 </a>
                             </li>
-                            <li className="page-item active">
+                            <li className="page-item" active>
                                 <a className="page-link" href="#">
                                 2 <span className="sr-only">(current)</span>
                                 </a>
@@ -1580,7 +1006,7 @@ export class Components extends Component {
                                 1
                                 </a>
                             </li>
-                            <li className="page-item active">
+                            <li className="page-item" active>
                                 <a className="page-link" href="#">
                                 2 <span className="sr-only">(current)</span>
                                 </a>
@@ -1729,108 +1155,20 @@ export class Components extends Component {
                         <div className="card-body pb-0">
                         <div className="row">
                             <div className="col-md-6">
-                            <div className="progress">
-                                <div
-                                className="progress-bar"
-                                role="progressbar"
-                                style={{ width: "10%" }}
-                                aria-valuenow={75}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
+                            <ProgressBar now={75} variant="primary" />
+                            <ProgressBar now={25} variant="success" />
+                            <ProgressBar now={50} variant="info" />
+                            <ProgressBar now={75} variant="primary" />
+                            <ProgressBar now={100} variant="danger" />
                             </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar bg-success"
-                                role="progressbar"
-                                style={{ width: "25%" }}
-                                aria-valuenow={25}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar bg-info"
-                                role="progressbar"
-                                style={{ width: "50%" }}
-                                aria-valuenow={50}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar bg-warning"
-                                role="progressbar"
-                                style={{ width: "75%" }}
-                                aria-valuenow={75}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar bg-danger"
-                                role="progressbar"
-                                style={{ width: "100%" }}
-                                aria-valuenow={100}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            </div>
+
                             <div className="col-md-6">
-                            <div className="progress">
-                                <div
-                                className="progress-bar progress-bar-striped"
-                                role="progressbar"
-                                style={{ width: "10%" }}
-                                aria-valuenow={10}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar progress-bar-striped bg-success"
-                                role="progressbar"
-                                style={{ width: "25%" }}
-                                aria-valuenow={25}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar progress-bar-striped bg-info"
-                                role="progressbar"
-                                style={{ width: "50%" }}
-                                aria-valuenow={50}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar progress-bar-striped bg-warning"
-                                role="progressbar"
-                                style={{ width: "75%" }}
-                                aria-valuenow={75}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
-                            <div className="progress">
-                                <div
-                                className="progress-bar progress-bar-striped bg-danger"
-                                role="progressbar"
-                                style={{ width: "100%" }}
-                                aria-valuenow={100}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                                />
-                            </div>
+                            <ProgressBar striped variant="primary" now={75} />
+                            <ProgressBar striped variant="success" now={25} />
+                            <ProgressBar striped variant="info" now={50} />
+                            <ProgressBar striped variant="primary" now={75} />
+                            <ProgressBar striped variant="danger" now={100} />
+                           
                             </div>
                         </div>
                         </div>
@@ -2797,10 +2135,10 @@ export class Components extends Component {
                             <h4 className="card-title">Text element</h4>
                             </div>
                             <div className="card-body">
-                            <p>
+                            {/* <p>
                                 You can use the mark tag to <mark>highlight</mark>{" "}
                                 text.
-                            </p>
+                            </p> */}
                             <p>
                                 <del>
                                 This line of text is meant to be treated as
@@ -3013,4 +2351,4 @@ export class Components extends Component {
   }
 }
 
-export default Components;
+export default ComponentSection;
