@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/react-fontawesome'; // Import the circle icon
+import { Image } from 'react-bootstrap'; 
 import Slider1 from '../../assets/img/specialities/specialities-01.png';
 import Slider2 from '../../assets/img/specialities/specialities-02.png';
 import Slider3 from '../../assets/img/specialities/specialities-03.png';
 import Slider4 from '../../assets/img/specialities/specialities-04.png';
 import Slider5 from '../../assets/img/specialities/specialities-05.png';
+import '../../assets/css/style.css';
+
 
 export class Specialty extends Component {
   render() {
@@ -71,8 +72,7 @@ export class Specialty extends Component {
                 {specialities.map((speciality, index) => (
                   <div key={index} className="speciality-item text-center">
                     <div className="speciality-img">
-                      <img src={speciality.imgSrc} className="img-fluid" alt="Speciality" />
-                      {/* <FontAwesomeIcon icon={faCircle} aria-hidden="true" /> */}
+                      <Image src={speciality.imgSrc} fluid alt="Speciality" />
                       <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                     </div>
                     <p>{speciality.name}</p>
